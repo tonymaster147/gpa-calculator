@@ -312,6 +312,108 @@ select:focus {
   font-size: 1.3rem;
 }
 
+/* ---- how it works ---- */
+.how h2 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+}
+
+.how h3 {
+  margin: 22px 0 12px;
+  font-size: 1rem;
+}
+
+.how p {
+  color: #43495a;
+  margin: 0 0 14px;
+}
+
+.how .note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.formula {
+  background: #f3f5fb;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 8px;
+}
+
+.point-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 8px 4px;
+  background: #fafbff;
+}
+
+.chip-grade {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.chip-points {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table.example {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+table.example th,
+table.example td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+table.example thead th {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+}
+
+table.example thead th:first-child {
+  border-top-left-radius: 8px;
+}
+table.example thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+table.example .total-row td {
+  font-weight: 700;
+  background: #f3f5fb;
+}
+
+table.example .gpa-row td {
+  font-weight: 700;
+  background: #eef6f1;
+}
+
+table.example .gpa-row strong {
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
 .foot {
   color: var(--muted);
   font-size: 0.82rem;

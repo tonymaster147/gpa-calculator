@@ -8,6 +8,7 @@ import {
 } from './gpa.js'
 import CourseRow from './components/CourseRow.jsx'
 import ResultCard from './components/ResultCard.jsx'
+import HowItWorks from './components/HowItWorks.jsx'
 
 let nextId = 1
 const uid = () => nextId++
@@ -228,6 +229,8 @@ export default function App() {
         showMulti={showMulti}
         formatGpa={formatGpa}
       />
+
+      <HowItWorks scaleKey={scaleKey} />
 
       <footer className="foot">
         <p>
