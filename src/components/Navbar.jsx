@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="topbar">
       <div className="topbar-inner">
         <a className="topbar-brand" href="#top" aria-label="Assignments4u home">
-          <Logo variant="light" />
+          <Logo />
         </a>
         <div className="topbar-contact">
           <a href="mailto:info@assignments4u.com">

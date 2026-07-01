@@ -11,7 +11,9 @@ import ResultCard from './components/ResultCard.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
-import OrderBand from './components/OrderBand.jsx'
+import WhatIsGpa from './components/WhatIsGpa.jsx'
+import ExcelSteps from './components/ExcelSteps.jsx'
+import OtherTools from './components/OtherTools.jsx'
 
 let nextId = 1
 const uid = () => nextId++
@@ -246,16 +248,14 @@ export default function App() {
         </div>
       </main>
 
-      <OrderBand />
+      <WhatIsGpa />
+      <ExcelSteps />
+      <OtherTools />
 
       <footer className="foot">
         <div className="foot-inner">
-          <p>
-            GPA = sum of (grade points × credits) ÷ total credits. Pass/No-Pass,
-            Withdraw and Incomplete grades are excluded from the calculation.
-          </p>
           <p className="foot-copy">
-            © {2026} Assignment4U — Free GPA Calculator. For educational use.
+            Assignments4u.com Copyright © 2013–2026 All Rights Reserved.
           </p>
         </div>
       </footer>
