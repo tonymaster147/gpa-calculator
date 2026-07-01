@@ -1,30 +1,63 @@
-import Logo from './Logo.jsx'
+import logoUrl from '../assets/logo.webp'
+
+const link = {
+  color: '#ffffff',
+  textDecoration: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '9px',
+}
 
 export default function Navbar() {
   return (
-    <header className="topbar">
-      <div className="topbar-inner">
-        <a className="topbar-brand" href="#top" aria-label="Assignments4u home">
-          <Logo />
+    <header
+      style={{
+        background: '#4193f7',
+        position: 'sticky',
+        top: 0,
+        zIndex: 50,
+        boxShadow: '0 2px 14px rgba(4,40,90,.16)',
+      }}
+    >
+      <div
+        className="a4u-header-inner"
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '16px 24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '24px',
+          flexWrap: 'wrap',
+        }}
+      >
+        <a
+          href="https://www.assignments4u.com/"
+          style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto' }}
+        >
+          <img
+            className="a4u-logo"
+            src={logoUrl}
+            alt="Assignments4U"
+            style={{ height: '40px', width: 'auto', display: 'block' }}
+          />
         </a>
-        <div className="topbar-contact">
-          <a href="mailto:info@assignments4u.com">
-            <svg viewBox="0 0 24 24" className="ci" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
-              />
-            </svg>
-            info@assignments4u.com
+        <div
+          className="a4u-contact"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '30px',
+            fontSize: '15px',
+            fontWeight: 500,
+          }}
+        >
+          <a className="a4u-navlink" href="mailto:info@assignments4u.com" style={link}>
+            <span style={{ opacity: 0.95 }}>✉</span> info@assignments4u.com
           </a>
-          <a href="tel:+15597420021">
-            <svg viewBox="0 0 24 24" className="ci" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1L6.6 10.8Z"
-              />
-            </svg>
-            +1-559-742-0021
+          <a className="a4u-navlink" href="tel:+15597420021" style={link}>
+            <span style={{ opacity: 0.95 }}>✆</span> +1-559-742-0021
           </a>
         </div>
       </div>

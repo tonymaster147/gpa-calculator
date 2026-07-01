@@ -1,4 +1,5 @@
 const ORDER_URL = 'https://www.assignments4u.com/sign-up/'
+const poppins = "'Poppins',sans-serif"
 
 const CARDS = [
   {
@@ -35,31 +36,115 @@ const CARDS = [
 
 export default function WhatIsGpa() {
   return (
-    <section className="whatis section-block">
-      <div className="wrap">
-        <h2 className="block-title">What Is GPA Calculation?</h2>
-        <p className="block-intro">
+    <section className="a4u-sec a4u-sec-pad" style={{ background: '#fff', padding: '64px 24px' }}>
+      <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+        <h2
+          className="a4u-h2"
+          style={{
+            fontFamily: poppins,
+            fontWeight: 800,
+            fontSize: '34px',
+            letterSpacing: '-.02em',
+            margin: '0 0 16px',
+            color: '#2c2c51',
+            textAlign: 'center',
+          }}
+        >
+          What Is GPA Calculation?
+        </h2>
+        <p
+          style={{
+            fontSize: '16px',
+            color: '#54677a',
+            maxWidth: '840px',
+            margin: '0 auto 40px',
+            textAlign: 'center',
+          }}
+        >
           In universities in the United States and many other nations, academic
-          accomplishment is commonly measured using the GPA or grade point
-          average. It calculates the mean of all the cumulative final grades
-          students have received in their academic careers. The general process
-          of calculating GPA is as follows:
+          accomplishment is commonly measured using the GPA or grade point average.
+          It calculates the mean of all the cumulative final grades students have
+          received in their academic careers. The general process of calculating GPA
+          is as follows:
         </p>
 
-        <div className="feature-grid">
+        <div
+          className="a4u-grid-2"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2,1fr)',
+            gap: '24px',
+          }}
+        >
           {CARDS.map((c) => (
-            <div className="feature-card" key={c.title}>
-              <span className="feature-icon">{c.icon}</span>
+            <div
+              key={c.title}
+              style={{
+                background: '#fff',
+                border: '1px solid #eef1f6',
+                borderRadius: '12px',
+                padding: '28px 30px',
+                boxShadow: '0 10px 30px rgba(20,40,63,.06)',
+                display: 'flex',
+                gap: '22px',
+                alignItems: 'flex-start',
+              }}
+            >
+              <span
+                style={{
+                  color: '#012d87',
+                  fontSize: '30px',
+                  flex: '0 0 auto',
+                  marginTop: '6px',
+                  width: '34px',
+                  textAlign: 'center',
+                }}
+              >
+                {c.icon}
+              </span>
               <div>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
+                <h3
+                  style={{
+                    fontFamily: poppins,
+                    fontWeight: 700,
+                    fontSize: '19px',
+                    margin: '0 0 10px',
+                    color: '#2c2c51',
+                  }}
+                >
+                  {c.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: '15.5px',
+                    color: '#3f4a57',
+                    margin: 0,
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {c.text}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="center-cta">
-          <a className="btn-cta primary" href={ORDER_URL}>
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <a
+            className="a4u-btn-primary"
+            href={ORDER_URL}
+            style={{
+              display: 'inline-block',
+              background: '#ff8d1c',
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontSize: '16px',
+              padding: '14px 40px',
+              borderRadius: '6px',
+              boxShadow: '0 10px 24px rgba(255,141,27,.28)',
+            }}
+          >
             Hire Experts
           </a>
         </div>
