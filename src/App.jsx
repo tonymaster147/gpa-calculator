@@ -9,6 +9,9 @@ import {
 import CourseRow from './components/CourseRow.jsx'
 import ResultCard from './components/ResultCard.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import OrderBand from './components/OrderBand.jsx'
 
 let nextId = 1
 const uid = () => nextId++
@@ -94,28 +97,35 @@ export default function App() {
   const showMulti = semesters.length > 1 || usePrior
 
   return (
-    <div className="page">
-      <header className="hero">
-        <h1>GPA Calculator</h1>
-        <p>
-          Calculate your college or high school GPA on the US 4.0 scale. Enter
-          your courses, grades and credit hours — your semester and cumulative
-          GPA update instantly.
-        </p>
-      </header>
+    <>
+      <Navbar />
+      <Hero />
 
-      <div className="toolbar">
-        <label className="field">
-          <span>Grading scale</span>
-          <select value={scaleKey} onChange={(e) => setScaleKey(e.target.value)}>
-            {Object.entries(SCALES).map(([key, s]) => (
-              <option key={key} value={key}>
-                {s.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
+      <main className="page">
+        <section id="calculator" className="tool-section">
+          <div className="section-head">
+            <h2>Free GPA Calculator</h2>
+            <p>
+              Enter your courses, grades and credit hours — your semester and
+              cumulative GPA on the US 4.0 scale update instantly.
+            </p>
+          </div>
+
+          <div className="toolbar">
+            <label className="field">
+              <span>Grading scale</span>
+              <select
+                value={scaleKey}
+                onChange={(e) => setScaleKey(e.target.value)}
+              >
+                {Object.entries(SCALES).map(([key, s]) => (
+                  <option key={key} value={key}>
+                    {s.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
 
       {semesters.map((sem, i) => {
         const result = semesterResults[i]
@@ -224,20 +234,31 @@ export default function App() {
         )}
       </section>
 
-      <ResultCard
-        cumulative={cumulative}
-        showMulti={showMulti}
-        formatGpa={formatGpa}
-      />
+          <ResultCard
+            cumulative={cumulative}
+            showMulti={showMulti}
+            formatGpa={formatGpa}
+          />
+        </section>
 
-      <HowItWorks scaleKey={scaleKey} />
+        <div id="how">
+          <HowItWorks scaleKey={scaleKey} />
+        </div>
+      </main>
+
+      <OrderBand />
 
       <footer className="foot">
-        <p>
-          GPA = sum of (grade points × credits) ÷ total credits. Pass/No-Pass,
-          Withdraw and Incomplete grades are excluded from the calculation.
-        </p>
+        <div className="foot-inner">
+          <p>
+            GPA = sum of (grade points × credits) ÷ total credits. Pass/No-Pass,
+            Withdraw and Incomplete grades are excluded from the calculation.
+          </p>
+          <p className="foot-copy">
+            © {2026} Assignment4U — Free GPA Calculator. For educational use.
+          </p>
+        </div>
       </footer>
-    </div>
+    </>
   )
 }
